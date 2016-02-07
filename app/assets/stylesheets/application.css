@@ -25,8 +25,15 @@
 
 }
 
+a{
+	text-decoration: none;
+
+}
 .pull-right ul li{
+	color: #000;
 	display: inline;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
 }
 
 .form{
