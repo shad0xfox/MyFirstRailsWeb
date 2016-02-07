@@ -25,6 +25,10 @@
 
 }
 
+.pull-right ul li{
+	display: inline;
+}
+
 .form{
 	width: 300px;
 }
