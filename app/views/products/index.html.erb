@@ -5,5 +5,5 @@
 	<div class= 'img-container' >
 		<%= image_tag product.image %>
 	</div>
-	<h2><%= product.name %> </h2>
+	<h2><%= link_to product.name , product_path(product) %> </h2>
 <% end %>

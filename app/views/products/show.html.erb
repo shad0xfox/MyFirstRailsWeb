@@ -1,0 +1,11 @@
+
+<div id="product_name" >
+	<h2><%= @product.name %> </h2>
+</div>
+
+<div class= 'img-container' >
+	<%= image_tag @product.image %>
+</div>
+
+<h2><%= "Price: " + " " + @product.price.to_s %> </h2>
+<h2><%= "Amount: " + " " + @product.amount.to_s %> </h2>
