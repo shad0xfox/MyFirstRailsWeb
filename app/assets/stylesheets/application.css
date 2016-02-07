@@ -24,3 +24,19 @@
 	color: red;
 
 }
+
+.form{
+	width: 300px;
+}
+
+
+input[type=text],
+input[type=email],
+input[type=password]{
+	width: 100%;
+	border: 1px solid #E6E6E6;
+	border-radius: 0px;
+	height: 60px;
+	margin: 6px auto;
+	text-indent:  10px ;
+}
