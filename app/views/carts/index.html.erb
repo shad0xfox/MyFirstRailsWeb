@@ -1,0 +1,16 @@
+
+<div id="cart">
+	<h2>Cart</h2>
+	<ul class="cart-items">
+		<% @orders.each do |order| %>
+			<li><%= order.number.to_s + " x " +order.product.name%> 
+			<div class='p-price'> <%= "$ "+(order.number*order.product.price).to_s %></div>
+			<%= button_to "delete",  order_path(order), :method => :delete %>
+			</li>
+		<% end %>
+	</ul>
+</div>
+
+
+
+

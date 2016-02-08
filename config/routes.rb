@@ -2,10 +2,12 @@ Rails.application.routes.draw do
   resources :products
   get 'signup' => 'users#new'
   resources :users
+  resources :orders
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
+  get 'cart' => 'carts#index'
 
   root  'products#index'
   # The priority is based upon order of creation: first created -> highest priority.
