@@ -5,3 +5,24 @@
 		<li><%= link_to "Orders", m_orders_path  %></li>
 	</ul>
 </div>
+
+<table class="table-bordered" >
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Product</th>
+			<th>Amount</th>
+			<th>Edit</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @products.each do |product| %>
+		<tr>
+			<td><%= product.id %></td>
+			<td><%= product.name %> </td>
+			<td><%= product.amount %> </td>
+			<td><%= "edit" %> </td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

@@ -6,6 +6,7 @@ class ManagementsController < ApplicationController
 	end
 
 	def m_products
+		@products = Product.all
 	end
 
 	def m_members
@@ -13,5 +14,6 @@ class ManagementsController < ApplicationController
 	end
 
 	def m_orders
+		@orders = Order.all
 	end
 end

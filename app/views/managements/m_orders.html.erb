@@ -5,3 +5,26 @@
 		<li><%= link_to "Orders", m_orders_path  %></li>
 	</ul>
 </div>
+
+<table class="table-bordered" >
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Product</th>
+			<th>Subcriber</th>
+			<th>Status</th>
+			<th>Edit</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @orders.each do |order| %>
+		<tr>
+			<td><%= order.id %></td>
+			<td><%= order.product.name %> </td>
+			<td><%= order.user.first_name+"_"+order.user.last_name %> </td>
+			<td><%= order.status %> </td>
+			<td><%= "edit" %> </td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
