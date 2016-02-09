@@ -27,13 +27,38 @@
 
 a{
 	text-decoration: none;
-
+	background-color: #cccccc;
 }
+a:visited{
+	color: #000000;
+}
+
 .pull-right ul li{
-	color: #000;
 	display: inline;
 	font-family: Arial, sans-serif;
 	font-weight: bold;
+
+}
+
+.management-menu ul {
+	padding:  0.5em ;
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+	border-top: solid;
+	border-bottom: solid;
+}
+
+.management-menu ul li{
+	color: #000000;
+	display: table-cell;
+	width:auto;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+}
+
+.management-menu a{
+	background-color:  #ffffff
 }
 
 .form{
@@ -82,4 +107,30 @@ input[type=number]{
 	top: 50%;
 	bottom: auto;
 
+}
+
+.table-bordered{
+	display:table;
+	border: 1px solid #cccccc;
+}
+
+tr{
+	padding: 0.5em;
+	display: table-row;
+
+}
+
+td,th{
+	padding-left: 0.2em;
+	padding-top:  0.5em;
+	padding-right: 1em;
+	text-align: left;
+	border-top: 1px solid #cccccc;
+	border-left: 1px solid #cccccc;
+}
+
+
+.table-bordered thead{
+	background-color: #e0e0e0 ;
+	text-align:left;
 }

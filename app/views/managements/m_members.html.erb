@@ -1,0 +1,30 @@
+<div class="management-menu">
+	<ul>
+		<li><%= link_to "Members", m_members_path  %></li>
+		<li><%= link_to "Products", m_products_path  %></li>
+		<li><%= link_to "Orders", m_orders_path  %></li>
+	</ul>
+</div>
+
+<table class="table-bordered" >
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Role</th>
+			<th>Edit</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @members.each do |member| %>
+		<tr>
+			<td><%= member.id %></td>
+			<td><%= member.first_name+"_"+member.last_name %> </td>
+			<td><%= member.email %> </td>
+			<td><%= member.role %> </td>
+			<td><%= "edit" %> </td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
