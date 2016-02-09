@@ -1,3 +1,4 @@
+<% session[:product_id] = @product.id %>
 
 <div id="product_name" >
 	<h2><%= @product.name %> </h2>
@@ -9,3 +10,4 @@
 
 <h2><%= "Price: " + " " + @product.price.to_s %> </h2>
 <h2><%= "Amount: " + " " + @product.amount.to_s %> </h2>
+<%= link_to "Buy this!" , new_order_path %>
