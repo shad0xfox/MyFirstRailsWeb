@@ -3,7 +3,7 @@ class CreateProducts < ActiveRecord::Migration
     create_table :products do |t|
       t.string :image
       t.string :name
-      t.string :amount
+      t.integer :amount
       t.timestamps null: false
     end
 
