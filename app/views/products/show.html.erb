@@ -10,4 +10,7 @@
 
 <h2><%= "Price: " + " " + @product.price.to_s %> </h2>
 <h2><%= "Amount: " + " " + @product.amount.to_s %> </h2>
-<%= link_to "Buy this!" , new_order_path %>
+
+<% if current_user %>
+	<%= link_to "Buy this!" , new_order_path %>
+<% end %>

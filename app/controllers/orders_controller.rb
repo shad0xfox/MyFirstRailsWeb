@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+	before_action :require_user
+
 	def destroy
 		@order = Order.find( params[:id])
 		@order.destroy
