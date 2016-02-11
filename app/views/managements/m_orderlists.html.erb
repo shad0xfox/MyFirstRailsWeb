@@ -2,7 +2,7 @@
 	<ul>
 		<li><%= link_to "Members", m_members_path  %></li>
 		<li><%= link_to "Products", m_products_path  %></li>
-		<li><%= link_to "Orders", m_orders_path  %></li>
+		<li><%= link_to "OrderLists", m_orderlists_path  %></li>
 	</ul>
 </div>
 
@@ -10,19 +10,17 @@
 	<thead>
 		<tr>
 			<th>#</th>
-			<th>Product</th>
 			<th>Subcriber</th>
-			<th>Status</th>
+			<th>Order time</th>
 			<th>Edit</th>
 		</tr>
 	</thead>
 	<tbody>
-		<% @orders.each do |order| %>
+		<% @orderlists.each do |orderlist| %>
 		<tr>
-			<td><%= order.id %></td>
-			<td><%= order.product.name %> </td>
-			<td><%= order.user.first_name+"_"+order.user.last_name %> </td>
-			<td><%= order.status %> </td>
+			<td><%= link_to orderlist.id, orderlist_path(orderlist), {:class => "orderlist-link"} %></td>
+			<td><%= orderlist.user.first_name+"_"+orderlist.user.last_name %> </td>
+			<td><%= orderlist.order_time %> </td>
 			<td><%= "edit" %> </td>
 		</tr>
 		<% end %>

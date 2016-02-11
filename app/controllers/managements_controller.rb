@@ -13,7 +13,7 @@ class ManagementsController < ApplicationController
 		@members = User.all
 	end
 
-	def m_orders
-		@orders = Order.all
+	def m_orderlists
+		@orderlists = Orderlist.all
 	end
 end

@@ -10,8 +10,13 @@
 		<% end %>
 	</ul>
 	<h2><%= "Total: $" + " " +@total.to_s %></h2>
+	<div class="list-form">
+		<% if @total > 0 %>
+			<%= button_to "Order!",  orderlists_path  %>
+		<%end%>
+	</div>
 </div>
-
+	
 
 
 

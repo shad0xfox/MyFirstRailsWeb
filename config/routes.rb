@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'signup' => 'users#new'
   resources :users
   resources :orders
+  resources :orderlists
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
@@ -14,7 +15,7 @@ Rails.application.routes.draw do
   get 'management' => 'managements#index'
   get 'management/members' => 'managements#m_members', as: :m_members
   get 'management/products' => 'managements#m_products', as: :m_products
-  get 'management/orders' => 'managements#m_orders', as: :m_orders
+  get 'management/orderlists' => 'managements#m_orderlists', as: :m_orderlists
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

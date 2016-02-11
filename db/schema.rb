@@ -11,15 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160209174340) do
+ActiveRecord::Schema.define(version: 20160211175521) do
+
+  create_table "orderlists", force: :cascade do |t|
+    t.integer  "user_id"
+    t.datetime "order_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "orders", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "product_id"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.integer  "number"
-    t.string   "status",     default: "N/A"
+    t.string   "status",       default: "In cart"
+    t.integer  "orderlist_id"
   end
 
   create_table "products", force: :cascade do |t|
