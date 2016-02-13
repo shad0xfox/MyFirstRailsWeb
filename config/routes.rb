@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   get 'management/members' => 'managements#m_members', as: :m_members
   get 'management/products' => 'managements#m_products', as: :m_products
   get 'management/orderlists' => 'managements#m_orderlists', as: :m_orderlists
+
+  get 'user/:id/change_inform' => 'users#change_inform', as: :change_inform
+  get 'user/:id/orders_of_user' => 'users#orders_of_user', as: :orders_of_user
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

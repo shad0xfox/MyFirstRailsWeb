@@ -1,0 +1,12 @@
+<%= form_for(@user) do |f| %>
+	<h3> Name: </h3> 
+	<%=  @user.first_name + @user.last_name %>
+	<h3>Email: </h3> 
+	<%= f.label :email, @user.email %>
+	<h3> Role:  <%= f.select :role ,  @select  %></h3> 
+	
+	<%= f.hidden_field :first_name %>
+	<%= f.hidden_field :last_name %>
+
+	<%= f.submit "Update" %>
+<% end %>

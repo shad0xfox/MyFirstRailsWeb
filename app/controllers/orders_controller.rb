@@ -9,7 +9,11 @@ class OrdersController < ApplicationController
 
 	def new
 		@product = Product.find( session[:product_id])
-		@order = Order.new
+		if @product.amount > 0
+			@order = Order.new
+		else
+			redirect_to root_path
+		end
 	end
 
 	def create

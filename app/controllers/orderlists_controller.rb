@@ -17,6 +17,12 @@ class OrderlistsController < ApplicationController
 
 	def show
 		@total = 0 
-		 @orderlist = Orderlist.find(params[:id])
+		@orderlist = Orderlist.find(params[:id])
+	end
+
+	def destroy
+		@orderlist = Orderlist.find( params[:id])
+		@orderlist.destroy
+		redirect_to m_orderlists_path
 	end
 end

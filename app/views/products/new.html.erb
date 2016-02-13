@@ -1,0 +1,14 @@
+<div class="form">
+<%= form_for(@product) do |f| %>
+	<%= f.label :name,"Product Name" %>
+	<%= f.text_field :name %> 
+	<%= f.label :image, "Image Link" %>
+	<%= f.text_field :image %> 
+	<%= f.label :amount, "Amount"%>
+	<%= f.number_field :amount, min: 0 %>
+	<%= f.label :price, "Price"%>
+	<%= f.number_field :price, min: 0 %>
+
+	<%= f.submit "Create" %> 
+<% end %>
+</div>

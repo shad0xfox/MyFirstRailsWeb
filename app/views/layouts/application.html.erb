@@ -12,14 +12,14 @@
 	<% if current_user %>
 		<ul>
 		<li><%= link_to "Home", root_path %></li>
-		<li><%= current_user.first_name + "_" + current_user.last_name %></li>
 		<li><%= link_to "Cart", cart_path %> 
 		<li><% if current_user.is_supervisor?  %>
 			<%= link_to "Management" , management_path %>
 			<% end %>
 		</li>
-		<li id='logout'><%= link_to "Log out", logout_path, method: "delete" %> </li>
 
+		<li class='user_logout'><%= link_to "Log out", logout_path, method: "delete" %> </li>
+		<li class='user_logout'><%= link_to (current_user.first_name + "_" + current_user.last_name) , user_path(current_user) %></li>
 		</ul>
 	<% else %>
 		<ul>

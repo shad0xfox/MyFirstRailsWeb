@@ -11,6 +11,6 @@
 <h2><%= "Price: " + " " + @product.price.to_s %> </h2>
 <h2><%= "Amount: " + " " + @product.amount.to_s %> </h2>
 
-<% if current_user %>
+<% if current_user && @product.amount > 0 %>
 	<%= link_to "Buy this!" , new_order_path %>
 <% end %>

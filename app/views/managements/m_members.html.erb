@@ -24,9 +24,12 @@
 			<td><%= member.first_name+"_"+member.last_name %> </td>
 			<td><%= member.email %> </td>
 			<td><%= member.role %> </td>
-			<td><%= "edit" %> </td>
 			<% if not member.is_supervisor? %>
+			<td><%= link_to "edit", edit_user_path(member) %> </td>
 			<td><%= link_to "Delete", user_path(member), method: "delete" %></td>
+			<% else %>
+				<td></td>
+				<td></td>
 			<%end%>
 		</tr>
 		<% end %>

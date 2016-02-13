@@ -14,18 +14,23 @@
  *= require_self
  */
 
-#logout{
+
+.user_logout {
 	float: right;
 }
+.user_logout a{
+	margin-left: 0.5em ;
+}
 
-.img-container{
-	height : 300px;
+
+.img-container img{
+	height : 200px;
 	overflow: hidden;
-	width: 300px;
+	width: 200px;
 }
 
 #product_name{
-	color: red;
+	color: black;
 
 }
 
@@ -36,6 +41,23 @@ a{
 }
 a:visited{
 	color: #000000;
+}
+
+.create-product {
+	padding-top: 0.5em;
+
+}
+
+.create-product a{
+	font: bold 15px Arial;
+	text-decoration: none;
+	background-color: #eeeeee;
+	color: #333333;
+	padding: 2px 6px 2px 6px;
+	border-top: 1px solid #cccccc;
+	border-right:1px solid #333333;
+	border-bottom:1px solid #333333;
+	border-left: 1px solid #cccccc;
 }
 
 .orderlist-link{
@@ -74,6 +96,11 @@ a:visited{
 .form{
 	width: 300px;
 }
+
+.form img{
+	width: 300px;
+	height:300px;
+}
 .list-form{
 	position: relative;
 
@@ -86,9 +113,14 @@ input[type=number]{
 	width: 100%;
 	border: 1px solid #E6E6E6;
 	border-radius: 0px;
-	height: 60px;
+	height: 30px;
 	margin: 6px auto;
-	text-indent:  10px ;
+	text-indent:  5px ;
+}
+
+#form-img img{
+	height: 100px ;
+	width: 100px ;
 }
 
 
