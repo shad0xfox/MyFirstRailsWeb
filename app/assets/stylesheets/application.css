@@ -21,7 +21,9 @@
 .user_logout a{
 	margin-left: 0.5em ;
 }
-
+.management{
+	margin-left: 3em;
+}
 
 .img-container img{
 	height : 200px;
@@ -62,6 +64,19 @@ a:visited{
 
 .orderlist-link{
 	background-color: #ababab;
+
+}
+
+.product-img{
+	width: 30%;
+	float: left;
+
+}
+
+.img-container ul li{
+	display: block;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
 
 }
 

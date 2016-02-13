@@ -13,7 +13,8 @@
 		<ul>
 		<li><%= link_to "Home", root_path %></li>
 		<li><%= link_to "Cart", cart_path %> 
-		<li><% if current_user.is_supervisor?  %>
+
+		<li class='management'><% if current_user.is_supervisor?  %>
 			<%= link_to "Management" , management_path %>
 			<% end %>
 		</li>
