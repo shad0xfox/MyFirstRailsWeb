@@ -3,7 +3,7 @@
 	<%= form_for (@order), :url => orders_path do |f| %>
 		<%= image_tag @product.image%>
 		<%= @product.name %>
-		<%= f.number_field :number, :placeholder => "How many do you want", min: 1 %>
+		<%= f.number_field :number, :placeholder => "How many do you want", min: 1, max: @product.amount %>
 		<%= f.hidden_field :user_id, :value => session[:user_id] %>
 		<%= f.hidden_field :product_id, :value => session[:product_id] %>
 		<%= f.submit "Add into your cart" %>
